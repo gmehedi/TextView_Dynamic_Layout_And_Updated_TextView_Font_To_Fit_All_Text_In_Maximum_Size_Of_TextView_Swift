@@ -1,0 +1,16 @@
+PODS:
+  - MaterialComponents/Palettes (119.1.0)
+
+DEPENDENCIES:
+  - MaterialComponents/Palettes
+
+SPEC REPOS:
+  trunk:
+    - MaterialComponents
+
+SPEC CHECKSUMS:
+  MaterialComponents: 04f29e3ec4965c29a48e13a626a0ab4bbd19e289
+
+PODFILE CHECKSUM: 81d22c3c3b6d0659bb10de595464fd5357bf2e1b
+
+COCOAPODS: 1.9.3
