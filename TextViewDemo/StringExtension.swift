@@ -36,16 +36,29 @@ extension String {
         let fontAttributes = [NSAttributedString.Key.font: font]
         return self.size(withAttributes: fontAttributes)
     }
+    
+    subscript(i: Int) -> String {
+            return String(self[index(startIndex, offsetBy: i)])
+        }
 }
 
 extension UITextView {
-    func increaseFontSize () {
-        var maxFontSize: CGFloat!
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            maxFontSize = 32.0
-        }else{
-            maxFontSize = 50.0
-        }
+    
+    func increaseFontSize (fontSize: CGFloat) {
+        var maxFontSize: CGFloat = fontSize
         self.font =  UIFont(name: self.font!.fontName, size: min( self.font!.pointSize + 1, CGFloat(maxFontSize)))
     }
+    
+    func sizeFit(width: CGFloat) -> CGSize {
+            let fixedWidth = width
+            let newSize = sizeThatFits(CGSize(width: fixedWidth, height: .greatestFiniteMagnitude))
+            return CGSize(width: fixedWidth, height: newSize.height)
+    }
+    
+    func numberOfLine() -> Int {
+            let size = self.sizeFit(width: self.bounds.width)
+            let numLines = Int(size.height / (self.font?.lineHeight ?? 1.0))
+            return numLines
+    }
+    
 }

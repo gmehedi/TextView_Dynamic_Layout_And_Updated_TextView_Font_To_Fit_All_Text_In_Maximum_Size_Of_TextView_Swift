@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textVC = TextViewVC(nibName: "TextViewVC", bundle: nil)
-        self.navigationController?.pushViewController(textVC, animated: true)
+        let mainVC = MainVC(nibName: "MainVC", bundle: nil)
+        self.navigationController?.pushViewController(mainVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

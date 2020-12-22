@@ -2,16 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextViewVC" customModule="TextViewDemo" customModuleProvider="target">
             <connections>
                 <outlet property="bottomView" destination="bdw-xo-x60" id="HIA-3k-7tI"/>
-                <outlet property="bottomViewBottomConstraint" destination="AXH-gN-KmZ" id="XDa-gj-TJ4"/>
+                <outlet property="bottomViewBottomConstraint" destination="AXH-gN-KmZ" id="hff-Ng-yeZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,30 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-xo-x60" customClass="TextBottomView" customModule="TextViewDemo" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="408" width="439" height="300"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="300" id="rEe-Jo-kdn"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="44" width="439" height="696"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsa-7J-phO">
-                    <rect key="frame" x="0.0" y="742" width="439" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="nfv-oG-iHc"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="Write Text"/>
-                    <connections>
-                        <action selector="tappedOnStartWritingButton:" destination="-1" eventType="touchUpInside" id="asJ-sM-3t1"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bdw-xo-x60" secondAttribute="bottom" constant="32" id="AXH-gN-KmZ"/>
-                <constraint firstAttribute="trailing" secondItem="Wsa-7J-phO" secondAttribute="trailing" id="Bhg-t3-Gk5"/>
-                <constraint firstItem="Wsa-7J-phO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Iya-14-gzC"/>
-                <constraint firstAttribute="bottom" secondItem="Wsa-7J-phO" secondAttribute="bottom" id="KXv-oN-rNC"/>
+                <constraint firstItem="bdw-xo-x60" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Wy-e6-ZKc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bdw-xo-x60" secondAttribute="bottom" id="AXH-gN-KmZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bdw-xo-x60" secondAttribute="trailing" id="M0L-1a-vXl"/>
                 <constraint firstItem="bdw-xo-x60" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WTm-2q-djW"/>
             </constraints>
@@ -52,9 +35,4 @@
             <point key="canvasLocation" x="71.739130434782609" y="39.508928571428569"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

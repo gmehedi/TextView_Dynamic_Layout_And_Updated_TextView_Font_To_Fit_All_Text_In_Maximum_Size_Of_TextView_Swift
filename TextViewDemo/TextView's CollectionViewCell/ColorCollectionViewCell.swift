@@ -7,10 +7,12 @@
 
 import UIKit
 
-class RightCollectionViewCell: UICollectionViewCell {
+class ColorCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var cellContainerView: UIView!
     @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var pickerImageView: UIImageView!
+    @IBOutlet weak var selectionImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

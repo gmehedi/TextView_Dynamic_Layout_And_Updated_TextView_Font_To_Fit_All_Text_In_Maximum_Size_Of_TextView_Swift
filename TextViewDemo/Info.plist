@@ -2,6 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mosk Medium 500.ttf</string>
+		<string>Canter-BoldShadow.otf</string>
+		<string>Canter-BoldStrips.otf</string>
+		<string>Fonarto XT.otf</string>
+		<string>clintonbolditalic.ttf</string>
+		<string>OpenSans-SemiBold.ttf</string>
+		<string>TheMumbaiStickerDemo-ShadowOutline 2.ttf</string>
+		<string>Canter-Bold.otf</string>
+		<string>Oswald[wght].ttf</string>
+		<string>TheMumbaiStickerDemo-Regular 2.ttf</string>
+		<string>Mosk Thin 100.ttf</string>
+		<string>FlexDisplay-Thin.otf</string>
+		<string>Soigné.ttf</string>
+		<string>Aquatico-Regular.otf</string>
+		<string>aAutoSignature.otf</string>
+		<string>Mosk Ultra-Bold 900.ttf</string>
+		<string>Canter-Bold.ttf</string>
+		<string>Mosk Extra-Bold 800.ttf</string>
+		<string>Fonarto.otf</string>
+		<string>Clinton semibold.ttf</string>
+		<string>Monad.otf</string>
+		<string>OpenSans-Light.ttf</string>
+		<string>Mosk Normal 400.ttf</string>
+		<string>OpenSans-Italic.ttf</string>
+		<string>Canter-BoldShadow.ttf</string>
+		<string>TrueLove-bold.ttf</string>
+		<string>Canter-BoldStrips.ttf</string>
+		<string>TheMumbaiStickerDemo-SVG.ttf</string>
+		<string>Quenos.otf</string>
+		<string>Canter-Light.ttf</string>
+		<string>OpenSans-ExtraBold.ttf</string>
+		<string>Blenda Script.otf</string>
+		<string>OpenSans-LightItalic.ttf</string>
+		<string>Canter-Bold3D.otf</string>
+		<string>Madgue Script.ttf</string>
+		<string>OpenSans-Bold.ttf</string>
+		<string>Canter-Outline.otf</string>
+		<string>V-FANCY-Regular.otf</string>
+		<string>Mosk Light 300.ttf</string>
+		<string>Madgue Swash.otf</string>
+		<string>OpenSans-SemiBoldItalic.ttf</string>
+		<string>Mosk Extra-Light 200.ttf</string>
+		<string>Canter-Bold3D.ttf</string>
+		<string>Madgue Script.otf</string>
+		<string>OpenSans-ExtraBoldItalic.ttf</string>
+		<string>Canter-Outline.ttf</string>
+		<string>ClintonBold.ttf</string>
+		<string>Mosk Bold 700.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+		<string>Madgue Swash.ttf</string>
+		<string>Facon.ttf</string>
+		<string>OpenSans-BoldItalic.ttf</string>
+		<string>Mosk Semi-Bold 600.ttf</string>
+		<string>ClintonExtraBold.ttf</string>
+		<string>Canter-Light.otf</string>
+		<string>TrueLove.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

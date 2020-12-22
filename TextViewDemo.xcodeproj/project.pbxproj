@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		52669B61256E74DC001392E7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669B60256E74DC001392E7 /* StringExtension.swift */; };
+		52683E40259217000048E78E /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52683E3F259217000048E78E /* TextView.swift */; };
 		526D4A13256B93DA00E45297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D4A12256B93DA00E45297 /* AppDelegate.swift */; };
 		526D4A15256B93DA00E45297 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D4A14256B93DA00E45297 /* SceneDelegate.swift */; };
 		526D4A17256B93DA00E45297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D4A16256B93DA00E45297 /* ViewController.swift */; };
@@ -20,13 +21,74 @@
 		526D4A48256B94F900E45297 /* TextViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526D4A46256B94F900E45297 /* TextViewVC.xib */; };
 		526D4A4D256BA19600E45297 /* TextBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526D4A4C256BA19600E45297 /* TextBottomView.xib */; };
 		526D4A52256BA28300E45297 /* TextBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D4A51256BA28300E45297 /* TextBottomView.swift */; };
-		527F3968256FBBB40014EE71 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3966256FBBB40014EE71 /* TopCollectionViewCell.swift */; };
-		527F3969256FBBB40014EE71 /* TopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F3967256FBBB40014EE71 /* TopCollectionViewCell.xib */; };
-		527F396F256FBBCA0014EE71 /* LeftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F396D256FBBCA0014EE71 /* LeftCollectionViewCell.swift */; };
-		527F3970256FBBCA0014EE71 /* LeftCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F396E256FBBCA0014EE71 /* LeftCollectionViewCell.xib */; };
-		527F3976256FBBDD0014EE71 /* RightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3974256FBBDD0014EE71 /* RightCollectionViewCell.swift */; };
-		527F3977256FBBDD0014EE71 /* RightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F3975256FBBDD0014EE71 /* RightCollectionViewCell.xib */; };
+		527F3968256FBBB40014EE71 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3966256FBBB40014EE71 /* MenuCollectionViewCell.swift */; };
+		527F3969256FBBB40014EE71 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F3967256FBBB40014EE71 /* MenuCollectionViewCell.xib */; };
+		527F396F256FBBCA0014EE71 /* OptionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F396D256FBBCA0014EE71 /* OptionsCollectionViewCell.swift */; };
+		527F3970256FBBCA0014EE71 /* OptionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F396E256FBBCA0014EE71 /* OptionsCollectionViewCell.xib */; };
+		527F3976256FBBDD0014EE71 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3974256FBBDD0014EE71 /* ColorCollectionViewCell.swift */; };
+		527F3977256FBBDD0014EE71 /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F3975256FBBDD0014EE71 /* ColorCollectionViewCell.xib */; };
 		527F397D256FC3080014EE71 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F397C256FC3080014EE71 /* UIColor+Extension.swift */; };
+		52816A6F257F7E560063DFED /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52816A6E257F7E560063DFED /* FontLoader.swift */; };
+		52816A74257F7E5E0063DFED /* FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52816A73257F7E5E0063DFED /* FontModel.swift */; };
+		52816CBC257F94740063DFED /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C82257F94740063DFED /* Mosk Medium 500.ttf */; };
+		52816CBD257F94740063DFED /* Canter-BoldShadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C83257F94740063DFED /* Canter-BoldShadow.otf */; };
+		52816CBE257F94740063DFED /* Canter-BoldStrips.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C84257F94740063DFED /* Canter-BoldStrips.otf */; };
+		52816CBF257F94740063DFED /* Fonarto XT.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C85257F94740063DFED /* Fonarto XT.otf */; };
+		52816CC0257F94740063DFED /* clintonbolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C86257F94740063DFED /* clintonbolditalic.ttf */; };
+		52816CC1257F94740063DFED /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C87257F94740063DFED /* OpenSans-SemiBold.ttf */; };
+		52816CC2257F94740063DFED /* TheMumbaiStickerDemo-ShadowOutline 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C88257F94740063DFED /* TheMumbaiStickerDemo-ShadowOutline 2.ttf */; };
+		52816CC3257F94740063DFED /* Canter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C89257F94740063DFED /* Canter-Bold.otf */; };
+		52816CC4257F94740063DFED /* Oswald[wght].ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C8A257F94740063DFED /* Oswald[wght].ttf */; };
+		52816CC5257F94740063DFED /* TheMumbaiStickerDemo-Regular 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C8B257F94740063DFED /* TheMumbaiStickerDemo-Regular 2.ttf */; };
+		52816CC6257F94740063DFED /* Mosk Thin 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C8C257F94740063DFED /* Mosk Thin 100.ttf */; };
+		52816CC7257F94740063DFED /* FlexDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C8D257F94740063DFED /* FlexDisplay-Thin.otf */; };
+		52816CC9257F94740063DFED /* Soigné.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C8F257F94740063DFED /* Soigné.ttf */; };
+		52816CCA257F94740063DFED /* Aquatico-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C90257F94740063DFED /* Aquatico-Regular.otf */; };
+		52816CCB257F94740063DFED /* aAutoSignature.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C91257F94740063DFED /* aAutoSignature.otf */; };
+		52816CCC257F94740063DFED /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C92257F94740063DFED /* Mosk Ultra-Bold 900.ttf */; };
+		52816CCD257F94740063DFED /* Canter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C93257F94740063DFED /* Canter-Bold.ttf */; };
+		52816CCE257F94740063DFED /* Mosk Extra-Bold 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C94257F94740063DFED /* Mosk Extra-Bold 800.ttf */; };
+		52816CCF257F94740063DFED /* Fonarto.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C95257F94740063DFED /* Fonarto.otf */; };
+		52816CD0257F94740063DFED /* Clinton semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C96257F94740063DFED /* Clinton semibold.ttf */; };
+		52816CD1257F94740063DFED /* Monad.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C97257F94740063DFED /* Monad.otf */; };
+		52816CD2257F94740063DFED /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C98257F94740063DFED /* OpenSans-Light.ttf */; };
+		52816CD3257F94740063DFED /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C99257F94740063DFED /* Mosk Normal 400.ttf */; };
+		52816CD4257F94740063DFED /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9A257F94740063DFED /* OpenSans-Italic.ttf */; };
+		52816CD5257F94740063DFED /* Canter-BoldShadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9B257F94740063DFED /* Canter-BoldShadow.ttf */; };
+		52816CD6257F94740063DFED /* TrueLove-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9C257F94740063DFED /* TrueLove-bold.ttf */; };
+		52816CD7257F94740063DFED /* Canter-BoldStrips.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9D257F94740063DFED /* Canter-BoldStrips.ttf */; };
+		52816CD8257F94740063DFED /* TheMumbaiStickerDemo-SVG.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9E257F94740063DFED /* TheMumbaiStickerDemo-SVG.ttf */; };
+		52816CD9257F94740063DFED /* Quenos.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816C9F257F94740063DFED /* Quenos.otf */; };
+		52816CDB257F94740063DFED /* Canter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA1257F94740063DFED /* Canter-Light.ttf */; };
+		52816CDC257F94740063DFED /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA2257F94740063DFED /* OpenSans-ExtraBold.ttf */; };
+		52816CDD257F94740063DFED /* Blenda Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA3257F94740063DFED /* Blenda Script.otf */; };
+		52816CDE257F94740063DFED /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA4257F94740063DFED /* OpenSans-LightItalic.ttf */; };
+		52816CDF257F94740063DFED /* Canter-Bold3D.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA5257F94740063DFED /* Canter-Bold3D.otf */; };
+		52816CE0257F94740063DFED /* Madgue Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA6257F94740063DFED /* Madgue Script.ttf */; };
+		52816CE1257F94740063DFED /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA7257F94740063DFED /* OpenSans-Bold.ttf */; };
+		52816CE2257F94740063DFED /* Canter-Outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA8257F94740063DFED /* Canter-Outline.otf */; };
+		52816CE3257F94740063DFED /* V-FANCY-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CA9257F94740063DFED /* V-FANCY-Regular.otf */; };
+		52816CE4257F94740063DFED /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAA257F94740063DFED /* Mosk Light 300.ttf */; };
+		52816CE5257F94740063DFED /* Madgue Swash.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAB257F94740063DFED /* Madgue Swash.otf */; };
+		52816CE6257F94740063DFED /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAC257F94740063DFED /* OpenSans-SemiBoldItalic.ttf */; };
+		52816CE7257F94740063DFED /* Mosk Extra-Light 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAD257F94740063DFED /* Mosk Extra-Light 200.ttf */; };
+		52816CE8257F94740063DFED /* Canter-Bold3D.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAE257F94740063DFED /* Canter-Bold3D.ttf */; };
+		52816CE9257F94740063DFED /* Madgue Script.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CAF257F94740063DFED /* Madgue Script.otf */; };
+		52816CEA257F94740063DFED /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB0257F94740063DFED /* OpenSans-ExtraBoldItalic.ttf */; };
+		52816CEB257F94740063DFED /* Canter-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB1257F94740063DFED /* Canter-Outline.ttf */; };
+		52816CEC257F94740063DFED /* ClintonBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB2257F94740063DFED /* ClintonBold.ttf */; };
+		52816CED257F94740063DFED /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB3257F94740063DFED /* Mosk Bold 700.ttf */; };
+		52816CEE257F94740063DFED /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB4257F94740063DFED /* OpenSans-Regular.ttf */; };
+		52816CEF257F94740063DFED /* Madgue Swash.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB5257F94740063DFED /* Madgue Swash.ttf */; };
+		52816CF0257F94740063DFED /* Facon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB6257F94740063DFED /* Facon.ttf */; };
+		52816CF1257F94740063DFED /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB7257F94740063DFED /* OpenSans-BoldItalic.ttf */; };
+		52816CF2257F94740063DFED /* Mosk Semi-Bold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB8257F94740063DFED /* Mosk Semi-Bold 600.ttf */; };
+		52816CF3257F94740063DFED /* ClintonExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CB9257F94740063DFED /* ClintonExtraBold.ttf */; };
+		52816CF4257F94740063DFED /* Canter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CBA257F94740063DFED /* Canter-Light.otf */; };
+		52816CF5257F94740063DFED /* TrueLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52816CBB257F94740063DFED /* TrueLove.ttf */; };
+		5283CA67258F606A004ACF6F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283CA65258F606A004ACF6F /* MainVC.swift */; };
+		5283CA68258F606A004ACF6F /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5283CA66258F606A004ACF6F /* MainVC.xib */; };
+		52A6274F2585F53F00CF6196 /* TextViewInof+Structure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6274E2585F53F00CF6196 /* TextViewInof+Structure.swift */; };
 		9E6D505A636A721F32E6829A /* Pods_TextViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB19BE115F1C47922115F888 /* Pods_TextViewDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		52669B60256E74DC001392E7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		52683E3F259217000048E78E /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		526D4A0F256B93DA00E45297 /* TextViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526D4A12256B93DA00E45297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		526D4A14256B93DA00E45297 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,13 +130,74 @@
 		526D4A46256B94F900E45297 /* TextViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewVC.xib; sourceTree = "<group>"; };
 		526D4A4C256BA19600E45297 /* TextBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextBottomView.xib; sourceTree = "<group>"; };
 		526D4A51256BA28300E45297 /* TextBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBottomView.swift; sourceTree = "<group>"; };
-		527F3966256FBBB40014EE71 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
-		527F3967256FBBB40014EE71 /* TopCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCollectionViewCell.xib; sourceTree = "<group>"; };
-		527F396D256FBBCA0014EE71 /* LeftCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftCollectionViewCell.swift; sourceTree = "<group>"; };
-		527F396E256FBBCA0014EE71 /* LeftCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftCollectionViewCell.xib; sourceTree = "<group>"; };
-		527F3974256FBBDD0014EE71 /* RightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightCollectionViewCell.swift; sourceTree = "<group>"; };
-		527F3975256FBBDD0014EE71 /* RightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightCollectionViewCell.xib; sourceTree = "<group>"; };
+		527F3966256FBBB40014EE71 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		527F3967256FBBB40014EE71 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		527F396D256FBBCA0014EE71 /* OptionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		527F396E256FBBCA0014EE71 /* OptionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		527F3974256FBBDD0014EE71 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		527F3975256FBBDD0014EE71 /* ColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		527F397C256FC3080014EE71 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		52816A6E257F7E560063DFED /* FontLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontLoader.swift; sourceTree = "<group>"; };
+		52816A73257F7E5E0063DFED /* FontModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontModel.swift; sourceTree = "<group>"; };
+		52816C82257F94740063DFED /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
+		52816C83257F94740063DFED /* Canter-BoldShadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldShadow.otf"; sourceTree = "<group>"; };
+		52816C84257F94740063DFED /* Canter-BoldStrips.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldStrips.otf"; sourceTree = "<group>"; };
+		52816C85257F94740063DFED /* Fonarto XT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonarto XT.otf"; sourceTree = "<group>"; };
+		52816C86257F94740063DFED /* clintonbolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clintonbolditalic.ttf; sourceTree = "<group>"; };
+		52816C87257F94740063DFED /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		52816C88257F94740063DFED /* TheMumbaiStickerDemo-ShadowOutline 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheMumbaiStickerDemo-ShadowOutline 2.ttf"; sourceTree = "<group>"; };
+		52816C89257F94740063DFED /* Canter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold.otf"; sourceTree = "<group>"; };
+		52816C8A257F94740063DFED /* Oswald[wght].ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald[wght].ttf"; sourceTree = "<group>"; };
+		52816C8B257F94740063DFED /* TheMumbaiStickerDemo-Regular 2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheMumbaiStickerDemo-Regular 2.ttf"; sourceTree = "<group>"; };
+		52816C8C257F94740063DFED /* Mosk Thin 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Thin 100.ttf"; sourceTree = "<group>"; };
+		52816C8D257F94740063DFED /* FlexDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FlexDisplay-Thin.otf"; sourceTree = "<group>"; };
+		52816C8F257F94740063DFED /* Soigné.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soigné.ttf"; sourceTree = "<group>"; };
+		52816C90257F94740063DFED /* Aquatico-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aquatico-Regular.otf"; sourceTree = "<group>"; };
+		52816C91257F94740063DFED /* aAutoSignature.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aAutoSignature.otf; sourceTree = "<group>"; };
+		52816C92257F94740063DFED /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
+		52816C93257F94740063DFED /* Canter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold.ttf"; sourceTree = "<group>"; };
+		52816C94257F94740063DFED /* Mosk Extra-Bold 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Bold 800.ttf"; sourceTree = "<group>"; };
+		52816C95257F94740063DFED /* Fonarto.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fonarto.otf; sourceTree = "<group>"; };
+		52816C96257F94740063DFED /* Clinton semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Clinton semibold.ttf"; sourceTree = "<group>"; };
+		52816C97257F94740063DFED /* Monad.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Monad.otf; sourceTree = "<group>"; };
+		52816C98257F94740063DFED /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		52816C99257F94740063DFED /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
+		52816C9A257F94740063DFED /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		52816C9B257F94740063DFED /* Canter-BoldShadow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldShadow.ttf"; sourceTree = "<group>"; };
+		52816C9C257F94740063DFED /* TrueLove-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrueLove-bold.ttf"; sourceTree = "<group>"; };
+		52816C9D257F94740063DFED /* Canter-BoldStrips.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldStrips.ttf"; sourceTree = "<group>"; };
+		52816C9E257F94740063DFED /* TheMumbaiStickerDemo-SVG.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheMumbaiStickerDemo-SVG.ttf"; sourceTree = "<group>"; };
+		52816C9F257F94740063DFED /* Quenos.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quenos.otf; sourceTree = "<group>"; };
+		52816CA1257F94740063DFED /* Canter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Light.ttf"; sourceTree = "<group>"; };
+		52816CA2257F94740063DFED /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		52816CA3257F94740063DFED /* Blenda Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blenda Script.otf"; sourceTree = "<group>"; };
+		52816CA4257F94740063DFED /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		52816CA5257F94740063DFED /* Canter-Bold3D.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold3D.otf"; sourceTree = "<group>"; };
+		52816CA6257F94740063DFED /* Madgue Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Madgue Script.ttf"; sourceTree = "<group>"; };
+		52816CA7257F94740063DFED /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		52816CA8257F94740063DFED /* Canter-Outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Outline.otf"; sourceTree = "<group>"; };
+		52816CA9257F94740063DFED /* V-FANCY-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "V-FANCY-Regular.otf"; sourceTree = "<group>"; };
+		52816CAA257F94740063DFED /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
+		52816CAB257F94740063DFED /* Madgue Swash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Madgue Swash.otf"; sourceTree = "<group>"; };
+		52816CAC257F94740063DFED /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		52816CAD257F94740063DFED /* Mosk Extra-Light 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Light 200.ttf"; sourceTree = "<group>"; };
+		52816CAE257F94740063DFED /* Canter-Bold3D.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold3D.ttf"; sourceTree = "<group>"; };
+		52816CAF257F94740063DFED /* Madgue Script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Madgue Script.otf"; sourceTree = "<group>"; };
+		52816CB0257F94740063DFED /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		52816CB1257F94740063DFED /* Canter-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Outline.ttf"; sourceTree = "<group>"; };
+		52816CB2257F94740063DFED /* ClintonBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ClintonBold.ttf; sourceTree = "<group>"; };
+		52816CB3257F94740063DFED /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
+		52816CB4257F94740063DFED /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		52816CB5257F94740063DFED /* Madgue Swash.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Madgue Swash.ttf"; sourceTree = "<group>"; };
+		52816CB6257F94740063DFED /* Facon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Facon.ttf; sourceTree = "<group>"; };
+		52816CB7257F94740063DFED /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		52816CB8257F94740063DFED /* Mosk Semi-Bold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Semi-Bold 600.ttf"; sourceTree = "<group>"; };
+		52816CB9257F94740063DFED /* ClintonExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ClintonExtraBold.ttf; sourceTree = "<group>"; };
+		52816CBA257F94740063DFED /* Canter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Light.otf"; sourceTree = "<group>"; };
+		52816CBB257F94740063DFED /* TrueLove.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrueLove.ttf; sourceTree = "<group>"; };
+		5283CA65258F606A004ACF6F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		5283CA66258F606A004ACF6F /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		52A6274E2585F53F00CF6196 /* TextViewInof+Structure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextViewInof+Structure.swift"; sourceTree = "<group>"; };
 		62E6C87B2920C228F193619B /* Pods-TextViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewDemo.release.xcconfig"; path = "Target Support Files/Pods-TextViewDemo/Pods-TextViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D5BA2679FB13104A310517BE /* Pods-TextViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextViewDemo.debug.xcconfig"; path = "Target Support Files/Pods-TextViewDemo/Pods-TextViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EB19BE115F1C47922115F888 /* Pods_TextViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +255,8 @@
 		526D4A11256B93DA00E45297 /* TextViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52816C81257F94740063DFED /* font */,
+				52816A6D257F7E480063DFED /* Font Class */,
 				526D4A12256B93DA00E45297 /* AppDelegate.swift */,
 				526D4A14256B93DA00E45297 /* SceneDelegate.swift */,
 				526D4A16256B93DA00E45297 /* ViewController.swift */,
@@ -138,12 +264,15 @@
 				526D4A1B256B93DC00E45297 /* Assets.xcassets */,
 				526D4A1D256B93DC00E45297 /* LaunchScreen.storyboard */,
 				526D4A20256B93DC00E45297 /* Info.plist */,
+				5283CA65258F606A004ACF6F /* MainVC.swift */,
+				5283CA66258F606A004ACF6F /* MainVC.xib */,
 				526D4A45256B94F900E45297 /* TextViewVC.swift */,
 				526D4A46256B94F900E45297 /* TextViewVC.xib */,
 				526D4A51256BA28300E45297 /* TextBottomView.swift */,
 				526D4A4C256BA19600E45297 /* TextBottomView.xib */,
 				52669B60256E74DC001392E7 /* StringExtension.swift */,
 				527F3965256FBB4B0014EE71 /* TextView's CollectionViewCell */,
+				52683E3F259217000048E78E /* TextView.swift */,
 			);
 			path = TextViewDemo;
 			sourceTree = "<group>";
@@ -169,12 +298,12 @@
 		527F3965256FBB4B0014EE71 /* TextView's CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				527F3966256FBBB40014EE71 /* TopCollectionViewCell.swift */,
-				527F3967256FBBB40014EE71 /* TopCollectionViewCell.xib */,
-				527F396D256FBBCA0014EE71 /* LeftCollectionViewCell.swift */,
-				527F396E256FBBCA0014EE71 /* LeftCollectionViewCell.xib */,
-				527F3974256FBBDD0014EE71 /* RightCollectionViewCell.swift */,
-				527F3975256FBBDD0014EE71 /* RightCollectionViewCell.xib */,
+				527F3966256FBBB40014EE71 /* MenuCollectionViewCell.swift */,
+				527F3967256FBBB40014EE71 /* MenuCollectionViewCell.xib */,
+				527F396D256FBBCA0014EE71 /* OptionsCollectionViewCell.swift */,
+				527F396E256FBBCA0014EE71 /* OptionsCollectionViewCell.xib */,
+				527F3974256FBBDD0014EE71 /* ColorCollectionViewCell.swift */,
+				527F3975256FBBDD0014EE71 /* ColorCollectionViewCell.xib */,
 			);
 			path = "TextView's CollectionViewCell";
 			sourceTree = "<group>";
@@ -183,8 +312,81 @@
 			isa = PBXGroup;
 			children = (
 				527F397C256FC3080014EE71 /* UIColor+Extension.swift */,
+				52A6274E2585F53F00CF6196 /* TextViewInof+Structure.swift */,
 			);
 			path = ColorExtension;
+			sourceTree = "<group>";
+		};
+		52816A6D257F7E480063DFED /* Font Class */ = {
+			isa = PBXGroup;
+			children = (
+				52816A73257F7E5E0063DFED /* FontModel.swift */,
+				52816A6E257F7E560063DFED /* FontLoader.swift */,
+			);
+			path = "Font Class";
+			sourceTree = "<group>";
+		};
+		52816C81257F94740063DFED /* font */ = {
+			isa = PBXGroup;
+			children = (
+				52816C82257F94740063DFED /* Mosk Medium 500.ttf */,
+				52816C83257F94740063DFED /* Canter-BoldShadow.otf */,
+				52816C84257F94740063DFED /* Canter-BoldStrips.otf */,
+				52816C85257F94740063DFED /* Fonarto XT.otf */,
+				52816C86257F94740063DFED /* clintonbolditalic.ttf */,
+				52816C87257F94740063DFED /* OpenSans-SemiBold.ttf */,
+				52816C88257F94740063DFED /* TheMumbaiStickerDemo-ShadowOutline 2.ttf */,
+				52816C89257F94740063DFED /* Canter-Bold.otf */,
+				52816C8A257F94740063DFED /* Oswald[wght].ttf */,
+				52816C8B257F94740063DFED /* TheMumbaiStickerDemo-Regular 2.ttf */,
+				52816C8C257F94740063DFED /* Mosk Thin 100.ttf */,
+				52816C8D257F94740063DFED /* FlexDisplay-Thin.otf */,
+				52816C8F257F94740063DFED /* Soigné.ttf */,
+				52816C90257F94740063DFED /* Aquatico-Regular.otf */,
+				52816C91257F94740063DFED /* aAutoSignature.otf */,
+				52816C92257F94740063DFED /* Mosk Ultra-Bold 900.ttf */,
+				52816C93257F94740063DFED /* Canter-Bold.ttf */,
+				52816C94257F94740063DFED /* Mosk Extra-Bold 800.ttf */,
+				52816C95257F94740063DFED /* Fonarto.otf */,
+				52816C96257F94740063DFED /* Clinton semibold.ttf */,
+				52816C97257F94740063DFED /* Monad.otf */,
+				52816C98257F94740063DFED /* OpenSans-Light.ttf */,
+				52816C99257F94740063DFED /* Mosk Normal 400.ttf */,
+				52816C9A257F94740063DFED /* OpenSans-Italic.ttf */,
+				52816C9B257F94740063DFED /* Canter-BoldShadow.ttf */,
+				52816C9C257F94740063DFED /* TrueLove-bold.ttf */,
+				52816C9D257F94740063DFED /* Canter-BoldStrips.ttf */,
+				52816C9E257F94740063DFED /* TheMumbaiStickerDemo-SVG.ttf */,
+				52816C9F257F94740063DFED /* Quenos.otf */,
+				52816CA1257F94740063DFED /* Canter-Light.ttf */,
+				52816CA2257F94740063DFED /* OpenSans-ExtraBold.ttf */,
+				52816CA3257F94740063DFED /* Blenda Script.otf */,
+				52816CA4257F94740063DFED /* OpenSans-LightItalic.ttf */,
+				52816CA5257F94740063DFED /* Canter-Bold3D.otf */,
+				52816CA6257F94740063DFED /* Madgue Script.ttf */,
+				52816CA7257F94740063DFED /* OpenSans-Bold.ttf */,
+				52816CA8257F94740063DFED /* Canter-Outline.otf */,
+				52816CA9257F94740063DFED /* V-FANCY-Regular.otf */,
+				52816CAA257F94740063DFED /* Mosk Light 300.ttf */,
+				52816CAB257F94740063DFED /* Madgue Swash.otf */,
+				52816CAC257F94740063DFED /* OpenSans-SemiBoldItalic.ttf */,
+				52816CAD257F94740063DFED /* Mosk Extra-Light 200.ttf */,
+				52816CAE257F94740063DFED /* Canter-Bold3D.ttf */,
+				52816CAF257F94740063DFED /* Madgue Script.otf */,
+				52816CB0257F94740063DFED /* OpenSans-ExtraBoldItalic.ttf */,
+				52816CB1257F94740063DFED /* Canter-Outline.ttf */,
+				52816CB2257F94740063DFED /* ClintonBold.ttf */,
+				52816CB3257F94740063DFED /* Mosk Bold 700.ttf */,
+				52816CB4257F94740063DFED /* OpenSans-Regular.ttf */,
+				52816CB5257F94740063DFED /* Madgue Swash.ttf */,
+				52816CB6257F94740063DFED /* Facon.ttf */,
+				52816CB7257F94740063DFED /* OpenSans-BoldItalic.ttf */,
+				52816CB8257F94740063DFED /* Mosk Semi-Bold 600.ttf */,
+				52816CB9257F94740063DFED /* ClintonExtraBold.ttf */,
+				52816CBA257F94740063DFED /* Canter-Light.otf */,
+				52816CBB257F94740063DFED /* TrueLove.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		964CD4564DF6890E9C580504 /* Pods */ = {
@@ -193,7 +395,6 @@
 				D5BA2679FB13104A310517BE /* Pods-TextViewDemo.debug.xcconfig */,
 				62E6C87B2920C228F193619B /* Pods-TextViewDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -310,14 +511,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527F3969256FBBB40014EE71 /* TopCollectionViewCell.xib in Resources */,
-				527F3977256FBBDD0014EE71 /* RightCollectionViewCell.xib in Resources */,
+				5283CA68258F606A004ACF6F /* MainVC.xib in Resources */,
+				527F3969256FBBB40014EE71 /* MenuCollectionViewCell.xib in Resources */,
+				52816CEF257F94740063DFED /* Madgue Swash.ttf in Resources */,
+				52816CC5257F94740063DFED /* TheMumbaiStickerDemo-Regular 2.ttf in Resources */,
+				52816CDC257F94740063DFED /* OpenSans-ExtraBold.ttf in Resources */,
+				52816CF5257F94740063DFED /* TrueLove.ttf in Resources */,
+				52816CC3257F94740063DFED /* Canter-Bold.otf in Resources */,
+				52816CC4257F94740063DFED /* Oswald[wght].ttf in Resources */,
+				52816CCA257F94740063DFED /* Aquatico-Regular.otf in Resources */,
+				52816CE8257F94740063DFED /* Canter-Bold3D.ttf in Resources */,
+				52816CD8257F94740063DFED /* TheMumbaiStickerDemo-SVG.ttf in Resources */,
+				52816CF0257F94740063DFED /* Facon.ttf in Resources */,
+				52816CD9257F94740063DFED /* Quenos.otf in Resources */,
+				52816CCB257F94740063DFED /* aAutoSignature.otf in Resources */,
+				52816CD3257F94740063DFED /* Mosk Normal 400.ttf in Resources */,
+				52816CF4257F94740063DFED /* Canter-Light.otf in Resources */,
+				52816CEE257F94740063DFED /* OpenSans-Regular.ttf in Resources */,
+				52816CCD257F94740063DFED /* Canter-Bold.ttf in Resources */,
+				527F3977256FBBDD0014EE71 /* ColorCollectionViewCell.xib in Resources */,
+				52816CE6257F94740063DFED /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				52816CC1257F94740063DFED /* OpenSans-SemiBold.ttf in Resources */,
+				52816CE4257F94740063DFED /* Mosk Light 300.ttf in Resources */,
+				52816CEB257F94740063DFED /* Canter-Outline.ttf in Resources */,
+				52816CED257F94740063DFED /* Mosk Bold 700.ttf in Resources */,
 				526D4A48256B94F900E45297 /* TextViewVC.xib in Resources */,
+				52816CE1257F94740063DFED /* OpenSans-Bold.ttf in Resources */,
+				52816CF2257F94740063DFED /* Mosk Semi-Bold 600.ttf in Resources */,
 				526D4A1F256B93DC00E45297 /* LaunchScreen.storyboard in Resources */,
+				52816CEC257F94740063DFED /* ClintonBold.ttf in Resources */,
+				52816CD4257F94740063DFED /* OpenSans-Italic.ttf in Resources */,
+				52816CC6257F94740063DFED /* Mosk Thin 100.ttf in Resources */,
+				52816CD2257F94740063DFED /* OpenSans-Light.ttf in Resources */,
 				526D4A4D256BA19600E45297 /* TextBottomView.xib in Resources */,
 				526D4A1C256B93DC00E45297 /* Assets.xcassets in Resources */,
-				527F3970256FBBCA0014EE71 /* LeftCollectionViewCell.xib in Resources */,
+				52816CD7257F94740063DFED /* Canter-BoldStrips.ttf in Resources */,
+				52816CD6257F94740063DFED /* TrueLove-bold.ttf in Resources */,
+				52816CE7257F94740063DFED /* Mosk Extra-Light 200.ttf in Resources */,
+				52816CC9257F94740063DFED /* Soigné.ttf in Resources */,
+				52816CE2257F94740063DFED /* Canter-Outline.otf in Resources */,
+				52816CE5257F94740063DFED /* Madgue Swash.otf in Resources */,
+				527F3970256FBBCA0014EE71 /* OptionsCollectionViewCell.xib in Resources */,
+				52816CDD257F94740063DFED /* Blenda Script.otf in Resources */,
+				52816CDF257F94740063DFED /* Canter-Bold3D.otf in Resources */,
+				52816CE9257F94740063DFED /* Madgue Script.otf in Resources */,
+				52816CD0257F94740063DFED /* Clinton semibold.ttf in Resources */,
+				52816CF1257F94740063DFED /* OpenSans-BoldItalic.ttf in Resources */,
+				52816CF3257F94740063DFED /* ClintonExtraBold.ttf in Resources */,
+				52816CC7257F94740063DFED /* FlexDisplay-Thin.otf in Resources */,
+				52816CBD257F94740063DFED /* Canter-BoldShadow.otf in Resources */,
+				52816CC0257F94740063DFED /* clintonbolditalic.ttf in Resources */,
+				52816CDE257F94740063DFED /* OpenSans-LightItalic.ttf in Resources */,
+				52816CCE257F94740063DFED /* Mosk Extra-Bold 800.ttf in Resources */,
+				52816CD1257F94740063DFED /* Monad.otf in Resources */,
+				52816CEA257F94740063DFED /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				52816CCC257F94740063DFED /* Mosk Ultra-Bold 900.ttf in Resources */,
+				52816CBE257F94740063DFED /* Canter-BoldStrips.otf in Resources */,
+				52816CE0257F94740063DFED /* Madgue Script.ttf in Resources */,
+				52816CD5257F94740063DFED /* Canter-BoldShadow.ttf in Resources */,
+				52816CCF257F94740063DFED /* Fonarto.otf in Resources */,
+				52816CC2257F94740063DFED /* TheMumbaiStickerDemo-ShadowOutline 2.ttf in Resources */,
 				526D4A1A256B93DA00E45297 /* Main.storyboard in Resources */,
+				52816CBF257F94740063DFED /* Fonarto XT.otf in Resources */,
+				52816CE3257F94740063DFED /* V-FANCY-Regular.otf in Resources */,
+				52816CDB257F94740063DFED /* Canter-Light.ttf in Resources */,
+				52816CBC257F94740063DFED /* Mosk Medium 500.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,16 +642,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527F3968256FBBB40014EE71 /* TopCollectionViewCell.swift in Sources */,
-				527F3976256FBBDD0014EE71 /* RightCollectionViewCell.swift in Sources */,
-				527F396F256FBBCA0014EE71 /* LeftCollectionViewCell.swift in Sources */,
+				527F3968256FBBB40014EE71 /* MenuCollectionViewCell.swift in Sources */,
+				527F3976256FBBDD0014EE71 /* ColorCollectionViewCell.swift in Sources */,
+				52816A74257F7E5E0063DFED /* FontModel.swift in Sources */,
+				527F396F256FBBCA0014EE71 /* OptionsCollectionViewCell.swift in Sources */,
+				52816A6F257F7E560063DFED /* FontLoader.swift in Sources */,
 				526D4A52256BA28300E45297 /* TextBottomView.swift in Sources */,
 				526D4A47256B94F900E45297 /* TextViewVC.swift in Sources */,
 				52669B61256E74DC001392E7 /* StringExtension.swift in Sources */,
 				526D4A17256B93DA00E45297 /* ViewController.swift in Sources */,
+				52683E40259217000048E78E /* TextView.swift in Sources */,
+				52A6274F2585F53F00CF6196 /* TextViewInof+Structure.swift in Sources */,
 				526D4A13256B93DA00E45297 /* AppDelegate.swift in Sources */,
 				526D4A15256B93DA00E45297 /* SceneDelegate.swift in Sources */,
 				527F397D256FC3080014EE71 /* UIColor+Extension.swift in Sources */,
+				5283CA67258F606A004ACF6F /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +836,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S27FAGF43P;
 				INFOPLIST_FILE = TextViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +857,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S27FAGF43P;
 				INFOPLIST_FILE = TextViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
