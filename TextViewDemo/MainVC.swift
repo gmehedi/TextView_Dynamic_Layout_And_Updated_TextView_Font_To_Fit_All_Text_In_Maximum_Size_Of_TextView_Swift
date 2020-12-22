@@ -71,7 +71,6 @@ extension MainVC {
         let frame = mainTextView.frame
         let container = UIView(frame: frame)
         container.backgroundColor = UIColor.clear
-        
         let textView = TextView(frame: mainTextView.bounds)
         let text = prepareText(numOfLine: mainTextView.numberOfLine(), font: mainTextView.font!, text: mainTextView.text, singleLinewidth: UIScreen.main.bounds.width - 10)
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
