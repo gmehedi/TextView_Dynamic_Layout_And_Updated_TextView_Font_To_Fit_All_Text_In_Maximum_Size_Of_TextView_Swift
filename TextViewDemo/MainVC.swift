@@ -76,7 +76,7 @@ extension MainVC {
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         textView.text = text
         textView.fontSize = mainTextView.font!.pointSize
-       // print("CReat Sz ", textView.fontSize)
+    
         textView.textColor = mainTextView.textColor
         textView.autocorrectionType = .no
         textView.backgroundColor = mainTextView.backgroundColor
